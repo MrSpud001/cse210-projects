@@ -26,11 +26,26 @@ class Program
 
         };
 
+        int sum = 0;
+        int max_num = 0;
+
         foreach(int num in numbers)
         {
-        Console.WriteLine(num);
+            if (num > max_num)
+            {
+                max_num = num;
+            }
+
+            sum += num;
             
-        };
+        }
+        Console.WriteLine($"sum is: {sum}");
+
+        Console.WriteLine($"average is: {sum / numbers.Count}");
+
+        Console.WriteLine($"maximum is: {max_num}");
+
+
 
     }
 }

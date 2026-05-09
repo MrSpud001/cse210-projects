@@ -6,10 +6,38 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise3 Project.");
 
-        Console.WriteLine("what is the number");
-        string number = Console.ReadLine();
-        int number_as_int = int.Parse(number);
-        string res;
+        // Console.WriteLine("what is the number");
+        // string number = Console.ReadLine();
+        // int number_as_int = int.Parse(number);
+        Random randomGenerator = new Random();
+        int number = randomGenerator.Next(1, 11);
+
+        while (true)
+        {
+            Console.WriteLine("what is your guess");
+            string res = Console.ReadLine();
+            int res_as_int = int.Parse(res);
+
+
+            if (res_as_int == number)
+            {
+                Console.WriteLine("guess correct");
+                break;
+            }
+            else if (res_as_int > number) {
+                Console.WriteLine("lower");
+                
+            }
+            else
+            {
+                Console.WriteLine("higher");
+            }
+
+        }
+
+
+
+
 
         // do
         // {
